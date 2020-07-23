@@ -12,7 +12,7 @@ int main()
 	cout << s.insert(1, "!") <<endl;
 	cout << s.erase(0, 2)<< endl;
 	cout << s.replace(0,2, "abc")<< endl;
-	cout << s.find(0,"ll") << endl;
+	cout << s.find(3,"ll") << endl;
 	system("pause");
 	return 0;
 }

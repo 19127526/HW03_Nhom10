@@ -119,3 +119,18 @@ const char* MyString::operator+(const MyString& other)
 	str[new_length] = '\0';
 	return str;
 }
+
+istream& operator >> (istream& input, MyString& str)
+{
+	cout << "Enter the length of the string: ";
+	input >> str.length_;
+	str.string_ = new char[str.length_ + 1];
+	cout << "Enter the string: ";
+	input.ignore();
+	input.getline(str.string_, str.length_+1);
+	return input;
+}
+ostream& operator <<(ostream& output, const MyString& str)
+{
+	return output << str.string_;
+}
